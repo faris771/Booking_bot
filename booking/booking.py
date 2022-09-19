@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from booking.filteration import Filteration
 
 
 # service = Service(executable_path=const.DRIVER_PATH)
@@ -18,7 +19,7 @@ class Booking(
         self.service = service
         super().__init__(
             service=service)  # this shit is for the Daddy class Chrome # THIS TOOK ME FKING LONG TOME TO ACKNOWLEDGE GET BACK TO SEC 3 TO UNDERSTAND
-        # self.maximize_window()
+        self.maximize_window()
         self.implicitly_wait(30)
 
         # the idea is that we pass the service thing to the parent class(chrome) for each object
@@ -78,6 +79,19 @@ class Booking(
 
         search_button = self.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
         search_button.click()
+
+    def exit_shit(self):
+        self.implicitly_wait(3)
+        try:
+            x_btn = self.find_element(By.XPATH, '//button[@aria-label="Dismiss sign in information."]')
+            x_btn.click()
+        except:
+            print('X not found')
+
+    def do_filteration(self):
+        filter_obj = Filteration(driver=self)
+        filter_obj.set_star_rating(4)
+        filter_obj.sort_by_lowest()
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         if self.tear_down:

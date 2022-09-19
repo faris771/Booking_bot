@@ -14,6 +14,7 @@ def main():
         bot.click_search()
         bot.exit_shit()
         bot.do_filteration()
+        bot.report()
 
 
 

@@ -4,7 +4,7 @@ import time
 
 
 class Filteration:
-    def __init__(self, driver: WebDriver):  # type casting
+    def __init__(self, driver: WebDriver):  # type casting, we pass the driver and call it, then call its methods
         self.driver = driver
 
     def set_star_rating(self, stars):  # args

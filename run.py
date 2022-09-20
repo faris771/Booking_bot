@@ -8,12 +8,13 @@ def main():
 
         bot.land_first_page()
         bot.change_currency(currency="ILS")
-        bot.select_place(place='New York') #by default Ramallah
+        bot.select_place(place='Ramallah') #by default Ramallah
         bot.select_date()
         bot.select_members(target_num=1)
         bot.click_search()
         bot.exit_shit()
         bot.do_filteration()
+        bot.refresh()
         bot.report()
 
 

@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 from booking.filteration import Filteration
 from booking.booking_report import BookingReport
 
+
 # service = Service(executable_path=const.DRIVER_PATH)
 # driver = webdriver.Chrome(service=service, options=opts)
 
@@ -94,10 +95,9 @@ class Booking(
         filter_obj.sort_by_lowest()
 
     def report(self):
-        hotels_cards = self.find_elements(By.XPATH,'//div[@data-testid="property-card"]')
-        rep = BookingReport(hotels_cards)
-        rep.get_titles()
-
+        rep = BookingReport(driver=self)
+        rep.get_titles_rating()
+        rep.print_report()
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         if self.tear_down:

@@ -21,7 +21,8 @@ pip install selenium
 pip install prettytable
 ```
 * change the PATH in constants to your PATH of webdriver
-run the program
+
+* run the program
  ```
-  python main.py
+  python run.py
   ```

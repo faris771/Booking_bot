@@ -1,5 +1,7 @@
 # Booking_bot
 
+## About This Project
+This project was developed a specialized web scraping bot using Python Selenium to efficiently find the most cost-effective hotel rooms exclusively on Booking.com. Applied Python programming skills and web automation techniques to navigate the Booking.com website, extracting and analyzing data to identify the most budget-friendly accommodation options in specific cities. This project showcases a targeted and efficient approach to optimizing hotel searches on Booking.com, demonstrating proficiency in Python and web automation for practical applications in data extraction and analysis.
 
 https://user-images.githubusercontent.com/70337488/191382478-60649ce1-b303-40b3-85ed-fc6a76f3e58e.mp4
 #
